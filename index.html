@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рассказы и оценки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        a {
+            font-size: 1.5em;
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Рассказы и оценки</h2>
+        <p>Приглашаем вас принять участие в лингвистическом эксперименте</p>
+        <a id="randomLink" href="#">Загрузка…</a>
+    </div>
+
+    <script>
+        // List of Google Docs links
+        const links = [
+            "https://forms.gle/vijMV48zrHaQ4oWe6",
+            "https://forms.gle/YoQpbhMA5Vh6YnMWA",
+            "https://forms.gle/hRCiTva375VKwpYX6",
+            "https://forms.gle/78G6aiJ2nimgQSWk6",
+            "https://forms.gle/D9TwMXyoqvM9Co8C6",
+            "https://forms.gle/4LNieejRFP4USRpz7",
+            "https://forms.gle/G2pD7emtghH6mmpF7"
+        ];
+
+        // Function to pick a random link
+        function getRandomLink() {
+            const randomIndex = Math.floor(Math.random() * links.length);
+            return links[randomIndex];
+        }
+
+        // Set the random link to the anchor tag
+        document.getElementById('randomLink').href = getRandomLink();
+        document.getElementById('randomLink').textContent = "Нажмите для начала эксперимента";
+    </script>
+</body>
+</html>
